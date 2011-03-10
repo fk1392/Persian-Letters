@@ -16,21 +16,23 @@ public class InputFiller {
 		
 		URL mehrnews = new URL(mehrnewsURL);
 		URLConnection mehrnewsConnection = mehrnews.openConnection();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(mehrnewsConnection.getInputStream()));
+		InputStream mehrnewsIS = mehrnewsConnection.getInputStream();
 		
-		FileWriter writer = new FileWriter(new File(mehrnewsSavePath));
-
-		String htmlLine;
-		while((htmlLine = reader.readLine()) != null){
-			writer.append(htmlLine);
+		OutputStream mehrnewsOS = new FileOutputStream(new File(mehrnewsSavePath));
+		int onebyte;
+		while(mehrnewsIS.available() != 0){
+			onebyte = mehrnewsIS.read();
+			mehrnewsOS.write(onebyte);
 		}
 		
-		writer.flush();
-		writer.close();
-		reader.close();
+		mehrnewsIS.close();
+		mehrnewsOS.flush();
+		mehrnewsOS.close();
 		
 		return this;
 	}
+
+	
 	
 
 }
