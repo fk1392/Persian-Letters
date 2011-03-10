@@ -21,7 +21,7 @@ public class PersianLetter {
 		
 
 		try {
-			inputfiller.getMehrnewsPage();
+			inputfiller.getMehrnewsPage().findMehrnewsLinks();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
