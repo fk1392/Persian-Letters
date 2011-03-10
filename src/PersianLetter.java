@@ -21,8 +21,8 @@ public class PersianLetter {
 		
 
 		try {
-			inputfiller.getMehrnewsPage().findMehrnewsLinks();
-		} catch (IOException e) {
+			inputfiller.getMehrnewsPage().findMehrnewsLinks().fillInputFileWithLinksInHashTable();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
