@@ -1,0 +1,8 @@
+Salam
+
+What?
+======
+
+This Java projects tires to determine the occurence probability of letters in Farsi language.
+
+For this purpos it can get the contents of Mehrnews.ir's homepage and read inside each news article and put those texts in input.txt file.
