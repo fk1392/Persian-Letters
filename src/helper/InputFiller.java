@@ -49,7 +49,7 @@ public class InputFiller {
 			if(classType != null && classType.equals(className)){
 				href = aElements[i].getAttributeByName("href");
 				href = "http://www.mehrnews.ir/" + href;
-				System.out.println(href);
+				//System.out.println(href);
 				mehrnewslinks.put(new Integer(i), new URL(href));
 			}
 		}
@@ -91,7 +91,7 @@ public class InputFiller {
 					for(int j = 0; j < children.length; j++){
 						sb = children[j].getText();
 						out.write(sb.toString());
-						System.out.println(sb.toString());
+						//System.out.println(sb.toString());
 					}
 
 				}
